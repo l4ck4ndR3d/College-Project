@@ -12,6 +12,12 @@ DELTA_URL = "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/de
 SAVE_DIR = '/app/data'
 os.makedirs(SAVE_DIR, exist_ok=True)
 
+# -- Email config --
+
+sender_email = os.getenv("SENDER_EMAIL")
+sender_password = os.getenv("SENDER_PASSWORD")  # Use an app password if 2FA
+recipient_email = os.getenv("RECIPIENT_EMAIL")
+
 header = f"""
 NOTE : \n
 1. New CVEs are updated without CVSS Scores and Affected Products details, will be updated in updated CVEs.\n
@@ -383,10 +389,7 @@ if __name__ == "__main__":
 
         if updated_count>0:
             final_body +=  update_body_text
-
-        sender_email = "xxxxxxxxxxxxxx@gmail.com"
-        sender_password = "APP PASSWORD"  # Use an app password if 2FA
-        recipient_email = "xxxxxxxxxxxxxx@gmail.com"
+            
         subject = f"{dt.now().year}-{dt.now().month}-{dt.now().day} | CVE Updates Notification"
         send_email(sender_email, sender_password, recipient_email, subject, final_body)
     except Exception as e:
