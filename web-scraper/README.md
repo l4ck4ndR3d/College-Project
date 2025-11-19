@@ -1,8 +1,7 @@
-Description : 
-    
-  Webscrapping tool is used for scrape the website in a specific pattern by using the Python's library (BeautifulSoup and request).After the scraping analyze and filter for required information.
-  After scraping the scraped information is stored in CSV file for future use of vulnerability details.
-  After storing in the file we taske a copy of the information and send it to the user's email itself.
+# Description : 
+ - Webscrapping tool is used for scrape the website in a specific pattern by using the Python's library (BeautifulSoup and request).After the scraping analyze and filter for required information.
+ - After scraping the scraped information is stored in CSV file for future use of vulnerability details.
+ - After storing in the file we taske a copy of the information and send it to the user's email itself.
 
 # Detailed Architecture Flow
 
@@ -14,32 +13,29 @@ Description :
         ◦ If a CVE ID exists today but not yesterday → New CVE
         ◦ If CVE exists but fields changed → Updated CVE
     6. Field Change Detection
-    The system checks changes in:
-  '''      ◦ CVSS score
-        ◦ Severity
-        ◦ Description
-        ◦ CWE list
-        ◦ Affected products
-        ◦ References
+        The system checks changes in:
+            ◦ CVSS score
+            ◦ Severity
+            ◦ Description
+            ◦ CWE list
+            ◦ Affected products
+            ◦ References
         ◦ Exploit status
-'''
-
-
     7. Extraction of CVSS & Severity
-For updated CVEs, the system extracts:
-        ◦ cvssMetricV31.baseScore
-        ◦ cvssMetricV31.baseSeverity
-        ◦ If missing, checks CVSSv2 fallback.
+        For updated CVEs, the system extracts:
+            ◦ cvssMetricV31.baseScore
+            ◦ cvssMetricV31.baseSeverity
+            ◦ If missing, checks CVSSv2 fallback.
     8. Email Content Creation
-Emails contain sections for:
-        ◦ New CVEs
-        ◦ Updated CVEs
-        ◦ Severity level
-        ◦ Scores
-        ◦ CWE mappings
-        ◦ CISA links
+        Emails contain sections for:
+            ◦ New CVEs
+            ◦ Updated CVEs
+            ◦ Severity level
+            ◦ Scores
+            ◦ CWE mappings
+            ◦ CISA links
 
-Requirements : 
+#### Requirements : 
 
 For sending the email to ourself we need 
 
