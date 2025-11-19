@@ -4,7 +4,8 @@ Description :
   After scraping the scraped information is stored in CSV file for future use of vulnerability details.
   After storing in the file we taske a copy of the information and send it to the user's email itself.
 
-Detailed Architecture Flow
+# Detailed Architecture Flow
+
     1. Trigger - A scheduled job (cron or task scheduler) runs the script daily.
     2. Data Fetching - The script makes a GET request to the CVE feed (NVD or CVE.org).
     3. Raw JSON Storage - The fetched JSON is saved as new_cves.json
@@ -13,15 +14,15 @@ Detailed Architecture Flow
         ◦ If a CVE ID exists today but not yesterday → New CVE
         ◦ If CVE exists but fields changed → Updated CVE
     6. Field Change Detection
-The system checks changes in:
-        ◦ CVSS score
+    The system checks changes in:
+  '''      ◦ CVSS score
         ◦ Severity
         ◦ Description
         ◦ CWE list
         ◦ Affected products
         ◦ References
         ◦ Exploit status
-
+'''
 
 
     7. Extraction of CVSS & Severity
