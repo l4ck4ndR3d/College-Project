@@ -53,4 +53,10 @@ Setting up App password:
     3.Update the APP PASSWORD to the "sender_password" variable.
     
   
-  
+- Docker setup of code : attached in the Docker_running_methods.md
+- Full script : script2.py
+- Dockerfile : Dockerfile
+
+Author : Bala 
+
+ 
