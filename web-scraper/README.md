@@ -55,6 +55,6 @@ Setting up App password:
 - Full script : script2.py
 - Dockerfile : Dockerfile
 
-Author : Bala 
+Author : Bala Mahendar | SOC Analyst Progress
 
  
