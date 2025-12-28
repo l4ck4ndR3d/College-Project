@@ -1,7 +1,5 @@
-# Description : 
- - Webscrapping tool is used for scrape the website in a specific pattern by using the Python's library (BeautifulSoup and request).After the scraping analyze and filter for required information.
- - After scraping the scraped information is stored in CSV file for future use of vulnerability details.
- - After storing in the file we taske a copy of the information and send it to the user's email itself.
+# Project Description : 
+ - CVE monitoring tools using Docker and Python, Scraping the CVE details from the Sources (Website, other resources) and preprocess the data. Generate the alert message for new and updated vulnerability details through Email. The vulnerability details are being stored in local/docker-contianer for future research. 
 
 # Detailed Architecture Flow
 
