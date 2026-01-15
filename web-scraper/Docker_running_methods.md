@@ -3,7 +3,7 @@
 3. docker run -d \
   --name cve-tracker \
   --env-file .env \
-  -v /home/cyborg/Documents/Research_inter_1/cve_updates:/app/cve_updates \
+  -v /path/to/csv/or/storage/file:/app/cve_updates \
   cve-tracker
 
 `Dont forgot to upload in the .env`
